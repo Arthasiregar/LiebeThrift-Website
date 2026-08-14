@@ -1,0 +1,89 @@
+/* ============================================
+   LIEBE THRIFT — DESIGN TOKENS
+   Semua warna & font didefinisikan di sini.
+   Kalau mau ganti tone warna nanti, cukup ubah 
+   nilai di bagian :root ini — otomatis berubah 
+   di semua elemen yang pakai variabel ini.
+   ============================================ */
+
+:root {
+  /* Warna */
+  --color-primary: #F7C6D9;      /* Blush Pink - brand utama */
+  --color-accent: #F291B0;       /* Soft Rose - tombol, CTA */
+  --color-bg: #FFF6F2;           /* Cream White - background */
+  --color-secondary: #FFD6C0;    /* Baby Peach - badge, tag */
+  --color-text: #5A3E4D;         /* Deep Plum - teks utama */
+  --color-success: #C9E4CA;      /* Sage Mint - badge kondisi bagus */
+  --color-white: #FFFFFF;
+
+  /* Font */
+  --font-heading: 'Quicksand', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+
+  /* Spacing (biar konsisten jarak antar elemen) */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+
+  /* Border radius (biar kesan playful/rounded konsisten) */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-full: 999px;
+}
+
+/* ============================================
+   CSS RESET
+   Menghilangkan default styling browser yang 
+   beda-beda, biar tampilan konsisten di semua 
+   browser.
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+}
+
+/* ============================================
+   Komponen di bawah ini akan kita isi 
+   satu per satu di step berikutnya:
+   - .navbar
+   - .hero
+   - .category-section
+   - .product-grid
+   - .footer
+   ============================================ */
