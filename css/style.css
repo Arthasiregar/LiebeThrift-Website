@@ -78,12 +78,156 @@ button {
   border: none;
 }
 
+/* == NAVBAR ==*/
+
+.navbar {
+  background-color: var(--color-white);
+  box-shadow: 0 2px 8px rgba(90, 62, 77, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+ 
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.navbar__logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+ 
+/* Menu */
+.navbar__menu ul {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.navbar__logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+ 
+/* Menu */
+.navbar__menu ul {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.navbar__menu a {
+  font-weight: 600;
+  color: var(--color-text);
+  transition: color 0.2s;
+}
+ 
+.navbar__menu a:hover {
+  color: var(--color-accent);
+}
+ 
+/* Search bar */
+.navbar__search {
+  flex: 1;
+  display: flex;
+  max-width: 320px;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid var(--color-primary);
+}
+ 
+.navbar__search input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: var(--space-xs) var(--space-sm);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  outline: none;
+}
+
+.navbar__search button {
+  background: var(--color-primary);
+  padding: var(--space-xs) var(--space-sm);
+}
+ 
+/* Icon Wishlist & Cart */
+.navbar__icons {
+  display: flex;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+ 
+.navbar__icon {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.navbar__icon .badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+ 
+/* Hamburger - default disembunyikan di desktop */
+.navbar__hamburger {
+  display: none;
+  background: transparent;
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
 /* ============================================
-   Komponen di bawah ini akan kita isi 
-   satu per satu di step berikutnya:
-   - .navbar
-   - .hero
-   - .category-section
-   - .product-grid
-   - .footer
+   RESPONSIVE — di bawah 768px (tablet/mobile)
    ============================================ */
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: none; /* disembunyikan, nanti dibuka lewat hamburger */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    padding: var(--space-sm);
+    box-shadow: 0 4px 8px rgba(90, 62, 77, 0.08);
+  }
+ 
+  .navbar__menu.is-open {
+    display: block;
+  }
+ 
+  .navbar__menu ul {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+ 
+  .navbar__search {
+    display: none; /* di mobile, search dipindah ke bawah navbar nanti */
+  }
+ 
+  .navbar__hamburger {
+    display: block;
+  }
+}
+ 

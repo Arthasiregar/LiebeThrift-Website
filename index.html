@@ -13,9 +13,50 @@
 </head>
 <body>
 
-  <!-- 
-    STEP 2 (belum kita isi): Navbar akan masuk di sini
-  -->
+  <!-- ============================================
+       NAVBAR
+       Logo + menu + search bar + wishlist/cart icon
+       ============================================ -->
+  <header class="navbar">
+    <div class="navbar__container">
+
+      <!-- Logo -->
+      <a href="index.html" class="navbar__logo">Liebe Thrift</a>
+
+      <!-- Menu (disembunyikan di mobile, diganti hamburger) -->
+      <nav class="navbar__menu" id="navbarMenu">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="listing.html">Belanja</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search bar -->
+      <div class="navbar__search">
+        <input type="text" placeholder="Cari brand, kategori, ukuran...">
+        <button aria-label="Cari">🔍</button>
+      </div>
+
+      <!-- Icon Wishlist & Cart -->
+      <div class="navbar__icons">
+        <a href="wishlist.html" class="navbar__icon" aria-label="Wishlist">
+          ❤️
+          <span class="badge">0</span>
+        </a>
+        <a href="cart.html" class="navbar__icon" aria-label="Keranjang">
+          🛒
+          <span class="badge">0</span>
+        </a>
+      </div>
+
+      <!-- Hamburger (khusus mobile) -->
+      <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Buka menu">
+        ☰
+      </button>
+
+    </div>
+  </header>
 
   <!-- 
     STEP 3 (belum kita isi): Hero + Search + Trending Chips akan masuk di sini
